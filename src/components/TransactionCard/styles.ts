@@ -39,6 +39,7 @@ export const Icon = styled(Feather)`
 `;
 
 export const CategoryName = styled.Text`
+  font-family: ${({ theme }) => theme.fonts.regular};
   font-size: ${RFValue(14)}px;
   color: ${({ theme }) => theme.colors.text};
 
@@ -46,6 +47,7 @@ export const CategoryName = styled.Text`
 `;
 
 export const Date = styled.Text`
+  font-family: ${({ theme }) => theme.fonts.regular};
   font-size: ${RFValue(14)}px;
   color: ${({ theme }) => theme.colors.text};
 `;
