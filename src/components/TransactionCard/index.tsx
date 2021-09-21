@@ -29,15 +29,18 @@ interface Props {
 }
 
 export function TransactionCard({ data }: Props) {
-  const { title, amount, category, date } = data;
+  const { type, title, amount, category, date } = data;
   return (
     <Container>
       <Title>{title}</Title>
-      <Amount>{amount}</Amount>
+      <Amount type={type}>
+        {data.type === 'negative' && '- '}
+        {amount}
+      </Amount>
 
       <Footer>
         <Category>
-          <Icon name='dollar-sign' />
+          <Icon name={category.icon} />
           <CategoryName>{category.name}</CategoryName>
         </Category>
         <Date>{date}</Date>
