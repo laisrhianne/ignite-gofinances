@@ -30,7 +30,7 @@ const schema = Yup.object().shape({
     .typeError('Informe um valor numérico')
     .positive('O valor não pode ser negativo')
     .required('O valor é obrigatório'),
-});
+}).defined();
 
 export function Register() {
   const [transactionType, setTransactionType] = useState('');
